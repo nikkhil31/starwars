@@ -1,7 +1,6 @@
 import { useMemo } from 'react'
+import { DOTS } from '../utils/constant'
 import { range } from '../utils/utils'
-
-const DOTS = '...'
 
 export const usePagination = ({
   totalCount,

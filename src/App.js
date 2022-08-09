@@ -1,13 +1,12 @@
 import React from 'react'
-import Header from './components/Header'
-import Main from './pages/Main'
+import { Header, Navigation } from './components'
 import './components/style.css'
 
 function App() {
   return (
     <>
       <Header />
-      <Main />
+      <Navigation />
     </>
   )
 }

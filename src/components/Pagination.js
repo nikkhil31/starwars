@@ -1,7 +1,8 @@
 import { Flex } from '@chakra-ui/react'
 import React from 'react'
 import { usePagination } from '../hook/usePagination'
-import PgButton from './PgButton'
+import { DOTS } from '../utils/constant'
+import { PgButton } from './'
 
 const Pagination = ({
   onPageChange,
@@ -48,8 +49,9 @@ const Pagination = ({
         </PgButton>
         {paginationRange.map(pageNumber => (
           <PgButton
+            key={pageNumber}
             active={pageNumber === currentPage}
-            onClick={() => onPageChange(pageNumber)}
+            onClick={() => pageNumber !== DOTS && onPageChange(pageNumber)}
           >
             {pageNumber}
           </PgButton>
